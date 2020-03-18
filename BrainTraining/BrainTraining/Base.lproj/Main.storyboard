@@ -51,7 +51,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="XWv-j5-m4b"/>
                     <connections>
-                        <outlet property="imageView" destination="JOb-ya-rA4" id="pjw-Ea-rnU"/>
+                        <outlet property="drawView" destination="JOb-ya-rA4" id="pjw-Ea-rnU"/>
                         <outlet property="tableView" destination="841-b3-i8Q" id="nAF-Tj-EuN"/>
                     </connections>
                 </viewController>

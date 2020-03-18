@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5770C27E24217F6700648312 /* DrawingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770C27D24217F6700648312 /* DrawingImageView.swift */; };
+		5770C28F2422660600648312 /* Digits.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5770C28E2422660600648312 /* Digits.mlmodel */; };
 		57B6F8EF241EF1E200AE38A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B6F8EE241EF1E200AE38A2 /* AppDelegate.swift */; };
 		57B6F8F3241EF1E200AE38A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B6F8F2241EF1E200AE38A2 /* ViewController.swift */; };
 		57B6F8F6241EF1E200AE38A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B6F8F4241EF1E200AE38A2 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		5770C27D24217F6700648312 /* DrawingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingImageView.swift; sourceTree = "<group>"; };
+		5770C28E2422660600648312 /* Digits.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Digits.mlmodel; sourceTree = "<group>"; };
 		57B6F8EB241EF1E200AE38A2 /* BrainTraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainTraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B6F8EE241EF1E200AE38A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57B6F8F2241EF1E200AE38A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				57B6F8EE241EF1E200AE38A2 /* AppDelegate.swift */,
 				57B6F8F2241EF1E200AE38A2 /* ViewController.swift */,
+				5770C28E2422660600648312 /* Digits.mlmodel */,
 				57B6F8F4241EF1E200AE38A2 /* Main.storyboard */,
 				5770C27D24217F6700648312 /* DrawingImageView.swift */,
 				57B6F8F7241EF1E400AE38A2 /* Assets.xcassets */,
@@ -140,6 +143,7 @@
 			files = (
 				57B6F8F3241EF1E200AE38A2 /* ViewController.swift in Sources */,
 				5770C27E24217F6700648312 /* DrawingImageView.swift in Sources */,
+				5770C28F2422660600648312 /* Digits.mlmodel in Sources */,
 				57B6F8EF241EF1E200AE38A2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
