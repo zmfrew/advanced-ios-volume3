@@ -12,6 +12,7 @@
 		57A93E962424EDCA0043E24B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57A93E942424EDCA0043E24B /* Main.storyboard */; };
 		57A93E982424EDCC0043E24B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57A93E972424EDCC0043E24B /* Assets.xcassets */; };
 		57A93E9B2424EDCC0043E24B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57A93E992424EDCC0043E24B /* LaunchScreen.storyboard */; };
+		57A93EA524251A120043E24B /* HousePrices.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 57A93EA424251A120043E24B /* HousePrices.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		57A93E972424EDCC0043E24B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57A93E9A2424EDCC0043E24B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57A93E9C2424EDCC0043E24B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57A93EA424251A120043E24B /* HousePrices.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = HousePrices.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				57A93E8E2424EDCA0043E24B /* AppDelegate.swift */,
 				57A93E922424EDCA0043E24B /* ViewController.swift */,
 				57A93E942424EDCA0043E24B /* Main.storyboard */,
+				57A93EA424251A120043E24B /* HousePrices.mlmodel */,
 				57A93E972424EDCC0043E24B /* Assets.xcassets */,
 				57A93E992424EDCC0043E24B /* LaunchScreen.storyboard */,
 				57A93E9C2424EDCC0043E24B /* Info.plist */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57A93E932424EDCA0043E24B /* ViewController.swift in Sources */,
+				57A93EA524251A120043E24B /* HousePrices.mlmodel in Sources */,
 				57A93E8F2424EDCA0043E24B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

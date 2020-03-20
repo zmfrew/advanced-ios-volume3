@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dMD-8k-fu7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,185 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PricePrediction" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rCe-Km-h7G">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ziP-Ha-TDa">
+                                        <rect key="frame" x="20" y="20" width="374" height="450"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Rooms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bjh-Xb-VAB">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iEW-nK-Hz5">
+                                                <rect key="frame" x="0.0" y="25.5" width="374" height="32"/>
+                                                <segments>
+                                                    <segment title="1"/>
+                                                    <segment title="2"/>
+                                                    <segment title="3"/>
+                                                    <segment title="4"/>
+                                                    <segment title="5"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="updatePrediction:" destination="BYZ-38-t0r" eventType="valueChanged" id="5S9-5A-5Dg"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Bathrooms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgM-Qy-wNV">
+                                                <rect key="frame" x="0.0" y="61.5" width="374" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7Tn-Bm-Lj5">
+                                                <rect key="frame" x="0.0" y="87" width="374" height="32"/>
+                                                <segments>
+                                                    <segment title="1"/>
+                                                    <segment title="2"/>
+                                                    <segment title="3"/>
+                                                    <segment title="4"/>
+                                                    <segment title="5"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="updatePrediction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Tfy-IK-SxA"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Garage Capacity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Skc-bn-XQ2">
+                                                <rect key="frame" x="0.0" y="123" width="374" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uXK-10-oOj">
+                                                <rect key="frame" x="0.0" y="148.5" width="374" height="32"/>
+                                                <segments>
+                                                    <segment title="1"/>
+                                                    <segment title="2"/>
+                                                    <segment title="3"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="updatePrediction:" destination="BYZ-38-t0r" eventType="valueChanged" id="hyI-Mz-6iU"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year Built" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5k-HT-vjV">
+                                                <rect key="frame" x="0.0" y="184.5" width="374" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2000" minValue="1950" maxValue="2018" translatesAutoresizingMaskIntoConstraints="NO" id="Lxu-ok-5zT">
+                                                <rect key="frame" x="-2" y="210" width="378" height="31"/>
+                                                <connections>
+                                                    <action selector="updatePrediction:" destination="BYZ-38-t0r" eventType="valueChanged" id="mdl-g9-rRe"/>
+                                                </connections>
+                                            </slider>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZ8-Ea-QOv">
+                                                <rect key="frame" x="0.0" y="245" width="374" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2000" minValue="400" maxValue="5000" translatesAutoresizingMaskIntoConstraints="NO" id="6AA-Yd-4RN">
+                                                <rect key="frame" x="-2" y="270.5" width="378" height="31"/>
+                                                <connections>
+                                                    <action selector="updatePrediction:" destination="BYZ-38-t0r" eventType="valueChanged" id="rIu-rC-Vui"/>
+                                                </connections>
+                                            </slider>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shH-nw-iO2">
+                                                <rect key="frame" x="0.0" y="305.5" width="374" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ReC-ax-uGC">
+                                                <rect key="frame" x="0.0" y="331" width="374" height="32"/>
+                                                <segments>
+                                                    <segment title="Poor"/>
+                                                    <segment title="Fair"/>
+                                                    <segment title="Average"/>
+                                                    <segment title="Good"/>
+                                                    <segment title="Perfect"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="updatePrediction:" destination="BYZ-38-t0r" eventType="valueChanged" id="ro4-bV-q4p"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estimated Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1K-YC-hg0">
+                                                <rect key="frame" x="0.0" y="367" width="374" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estimated Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOV-8s-vxs">
+                                                <rect key="frame" x="0.0" y="392.5" width="374" height="57.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="48"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ziP-Ha-TDa" firstAttribute="leading" secondItem="rCe-Km-h7G" secondAttribute="leading" constant="20" id="FyY-zW-Tlw"/>
+                                    <constraint firstAttribute="trailing" secondItem="ziP-Ha-TDa" secondAttribute="trailing" constant="20" id="TrY-Td-r7n"/>
+                                    <constraint firstItem="ziP-Ha-TDa" firstAttribute="top" secondItem="rCe-Km-h7G" secondAttribute="top" constant="20" id="WLS-uE-eiN"/>
+                                    <constraint firstItem="ziP-Ha-TDa" firstAttribute="width" secondItem="rCe-Km-h7G" secondAttribute="width" constant="-40" id="kTR-JZ-xrj"/>
+                                    <constraint firstAttribute="bottom" secondItem="ziP-Ha-TDa" secondAttribute="bottom" constant="20" id="vVh-Ha-JeS"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="2XG-LC-7LE"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="JaX-5z-rje"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rCe-Km-h7G" secondAttribute="trailing" id="a20-t7-GZN"/>
+                            <constraint firstItem="rCe-Km-h7G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cuS-Ck-jNf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rCe-Km-h7G" secondAttribute="bottom" id="eC2-yF-4oM"/>
+                            <constraint firstItem="rCe-Km-h7G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zs8-E2-gKv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="aud-2j-a7v"/>
+                    <connections>
+                        <outlet property="condition" destination="ReC-ax-uGC" id="L52-5R-re4"/>
+                        <outlet property="garageCapacity" destination="uXK-10-oOj" id="1tp-oc-V52"/>
+                        <outlet property="numberOfBathrooms" destination="7Tn-Bm-Lj5" id="Or6-wk-qYf"/>
+                        <outlet property="numberOfRooms" destination="iEW-nK-Hz5" id="4Mc-PI-E53"/>
+                        <outlet property="result" destination="KOV-8s-vxs" id="wjP-cW-9By"/>
+                        <outlet property="sizeLabel" destination="nZ8-Ea-QOv" id="T6y-MP-vAx"/>
+                        <outlet property="sizeSlider" destination="6AA-Yd-4RN" id="E5b-QP-INN"/>
+                        <outlet property="stackView" destination="ziP-Ha-TDa" id="Ngk-ti-j09"/>
+                        <outlet property="yearBuiltLabel" destination="g5k-HT-vjV" id="q61-OL-yu7"/>
+                        <outlet property="yearBuiltSlider" destination="Lxu-ok-5zT" id="d8f-BT-A6f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7Ch-yk-pFn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dMD-8k-fu7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SkV-0P-GtO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="o0X-De-sOY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Z0-dc-GbA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>
