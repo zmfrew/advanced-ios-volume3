@@ -12,6 +12,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     let phone = SCNNode(geometry: SCNPlane(width: 1, height: 1))
     let smoothingAmount = 20
     var eyeLookHistory = ArraySlice<CGPoint>()
+    var targets = [UIImageView]()
+    var currentTarget = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +25,44 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.scene.rootNode.addChildNode(phone)
         face.addChildNode(leftEye)
         face.addChildNode(rightEye)
+        
+        let rowStackView = UIStackView()
+        rowStackView.translatesAutoresizingMaskIntoConstraints = false
+        rowStackView.distribution = .fillEqually
+        rowStackView.axis = .vertical
+        rowStackView.spacing = 20
+        
+        for _ in 1...6 {
+            let colStackView = UIStackView()
+            colStackView.translatesAutoresizingMaskIntoConstraints = false
+            colStackView.distribution = .fillEqually
+            colStackView.spacing = 20
+            colStackView.axis = .horizontal
+            
+            rowStackView.addArrangedSubview(colStackView)
+            
+            for _ in 1...4 {
+                let imageView = UIImageView(image: UIImage(named: "target"))
+                imageView.contentMode = .scaleAspectFit
+                imageView.alpha = 0
+                
+                targets.append(imageView)
+                colStackView.addArrangedSubview(imageView)
+            }
+        }
+        
+        view.addSubview(rowStackView)
+        NSLayoutConstraint.activate([
+            rowStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            rowStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            rowStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
+            rowStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
+        
+        view.bringSubviewToFront(reticule)
+        targets.shuffle()
+        
+        perform(#selector(createTarget), with: nil, afterDelay: 2)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,6 +71,22 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         guard ARFaceTrackingConfiguration.isSupported else { return }
         let configuration = ARFaceTrackingConfiguration()
         sceneView.session.run(configuration)
+    }
+    
+    @objc func createTarget() {
+        let target = targets[currentTarget]
+        target.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
+        UIView.animate(withDuration: 0.3) {
+            target.transform = .identity
+            target.alpha = 1
+        }
+        
+        currentTarget += 1
+    }
+    
+    func fire() {
+        let reticuleFrame = reticule.superview!.convert(reticule.frame, to: nil)
+        // more to come
     }
     
     func update(using anchor: ARFaceAnchor) {
