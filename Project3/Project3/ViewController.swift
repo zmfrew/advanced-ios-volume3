@@ -14,7 +14,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var eyeLookHistory = ArraySlice<CGPoint>()
     var targets = [UIImageView]()
     var currentTarget = 0
-    
+    var gunshot: AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,10 +86,36 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     func fire() {
         let reticuleFrame = reticule.superview!.convert(reticule.frame, to: nil)
-        // more to come
+        
+        let hitTargets = targets.filter { imageView in
+            if imageView.alpha == 0 { return false }
+            
+            let ourFrame = imageView.superview!.convert(imageView.frame, to: nil)
+            
+            return ourFrame.intersects(reticuleFrame)
+        }
+        
+        guard let selected = hitTargets.first else { return }
+        
+        selected.alpha = 0
+        
+        if let url = Bundle.main.url(forResource: "shot", withExtension: "wav") {
+            gunshot = try? AVAudioPlayer(contentsOf: url)
+            gunshot?.play()
+        }
+        
+        perform(#selector(createTarget), with: nil, afterDelay: 1)
     }
     
     func update(using anchor: ARFaceAnchor) {
+        if let leftBlink = anchor.blendShapes[.eyeBlinkLeft] as? Float,
+            let rightBlink = anchor.blendShapes[.eyeBlinkRight] as? Float {
+            if leftBlink > 0.1 && rightBlink > 0.1 {
+                fire()
+                return
+            }
+        }
+        
         leftEye.simdTransform = anchor.leftEyeTransform
         rightEye.simdTransform = anchor.rightEyeTransform
         
