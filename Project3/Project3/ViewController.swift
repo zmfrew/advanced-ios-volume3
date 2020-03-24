@@ -15,6 +15,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var targets = [UIImageView]()
     var currentTarget = 0
     var gunshot: AVAudioPlayer?
+    var startTime = CACurrentMediaTime()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,6 +75,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     @objc func createTarget() {
+        guard currentTarget < targets.count else {
+            endGame()
+            return
+        }
+        
         let target = targets[currentTarget]
         target.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
         UIView.animate(withDuration: 0.3) {
@@ -82,6 +88,20 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
         
         currentTarget += 1
+    }
+    
+    @objc func finish() {
+        dismiss(animated: true) {
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+    }
+    
+    func endGame() {
+        let timeTaken = Int(CACurrentMediaTime() - startTime)
+        let ac = UIAlertController(title: "Game over!", message: "You took \(timeTaken) seconds.", preferredStyle: .alert)
+        present(ac, animated: true)
+        
+        perform(#selector(finish), with: nil, afterDelay: 3)
     }
     
     func fire() {

@@ -14,6 +14,7 @@
 		57F0E4F3242695DE00E53618 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57F0E4F2242695DE00E53618 /* Assets.xcassets */; };
 		57F0E4F6242695DE00E53618 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57F0E4F4242695DE00E53618 /* LaunchScreen.storyboard */; };
 		57F0E4FE2426970800E53618 /* Eye.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F0E4FD2426970800E53618 /* Eye.swift */; };
+		57F8E120242A4A7100894362 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F8E11F242A4A7100894362 /* TitleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		57F0E4F5242695DE00E53618 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57F0E4F7242695DE00E53618 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57F0E4FD2426970800E53618 /* Eye.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eye.swift; sourceTree = "<group>"; };
+		57F8E11F242A4A7100894362 /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		57F0E4E8242695DD00E53618 /* Project3 */ = {
 			isa = PBXGroup;
 			children = (
+				57F8E11F242A4A7100894362 /* TitleViewController.swift */,
 				57F0E4E9242695DD00E53618 /* AppDelegate.swift */,
 				57F0E4ED242695DD00E53618 /* ViewController.swift */,
 				57F0E4FD2426970800E53618 /* Eye.swift */,
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57F0E4EE242695DD00E53618 /* ViewController.swift in Sources */,
+				57F8E120242A4A7100894362 /* TitleViewController.swift in Sources */,
 				57F0E4EA242695DD00E53618 /* AppDelegate.swift in Sources */,
 				57F0E4FE2426970800E53618 /* Eye.swift in Sources */,
 			);
