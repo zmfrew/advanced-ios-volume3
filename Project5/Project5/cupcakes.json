@@ -1,0 +1,32 @@
+[
+	{
+		"name": "Super Strawberry",
+		"description": "Strawberry infused frosting with a Superman logo embossed on top. Totally not licensed by DC Comics.",
+		"price": 3
+	},
+	{
+		"name": "Double Chocolate",
+		"description": "Milk chocolate and dog chocolate all mixed in one, because you probably can't spot the dog chocolate amongst all that sugar.",
+		"price": 4
+	},
+	{
+		"name": "Vanilla Surprise",
+		"description": "Surprise! It's just vanilla.",
+		"price": 2
+	},
+	{
+		"name": "Apple Crumble",
+		"description": "It's just a regular cupcake, but we serve it on top of old iPhones and charge four times the price.",
+		"price": 8
+	},
+	{
+		"name": "Good for Muffin",
+		"description": "This isn't really a cupcake, Linda, so don't put this one on the menu.",
+		"price": 3
+	},
+	{
+		"name": "Quintuple Chocolate",
+		"description": "Dark chocolate, milk chocolate, white chocolate, and chocolate from the 4th dimension combine in one cupcake. Only joking – it's just dog chocolate again.",
+		"price": 5
+	}
+]

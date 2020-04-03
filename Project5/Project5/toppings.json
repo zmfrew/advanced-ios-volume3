@@ -1,0 +1,37 @@
+[
+	{
+		"name": "Birthday Candles",
+		"description": "Celebrate someone getting older by embarrassing them in public.",
+		"price": 2
+	},
+	{
+		"name": "Milk Chocolate Sprinkles",
+		"description": "Sugar sprinkles with a slightly lighter brown color",
+		"price": 1
+	},
+	{
+		"name": "Dark Chocolate Sprinkles",
+		"description": "Sugar sprinkles with a slightly darker brown color",
+		"price": 1
+	},
+	{
+		"name": "Plain Chocolate Sprinkles",
+		"description": "Sugar sprinkles with a regular brown color",
+		"price": 1
+	},
+	{
+		"name": "Sprinkle Sprinkles",
+		"description": "Sugar sprinkles with even smaller sprinkles on top.",
+		"price": 2
+	},
+	{
+		"name": "Double Extra Frosting",
+		"description": "Bonus frosting on top of your regular frosting",
+		"price": 2
+	},
+	{
+		"name": "Triple Extra Frosting",
+		"description": "At this point it's basically frosting with a small cupcake somewhere underneath.",
+		"price": 3
+	}
+]
