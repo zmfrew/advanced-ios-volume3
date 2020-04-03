@@ -15,7 +15,10 @@ final class ToppingsViewController: UITableViewController {
     }
     
     @objc func placeOrder() {
-        
+        let orderVC = storyboard!.instantiateViewController(withIdentifier: "OrderViewController") as! OrderViewController
+        orderVC.cake = cake
+        orderVC.toppings = selectedToppings
+        navigationController?.pushViewController(orderVC, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

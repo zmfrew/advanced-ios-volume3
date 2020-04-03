@@ -99,7 +99,7 @@
         <!--Order View Controller-->
         <scene sceneID="ESa-5W-9oZ">
             <objects>
-                <viewController id="z66-sV-isL" customClass="OrderViewController" customModule="Project5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrderViewController" id="z66-sV-isL" customClass="OrderViewController" customModule="Project5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wFS-xv-XsA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -160,7 +160,7 @@
                     <connections>
                         <outlet property="cost" destination="w5D-WN-YRz" id="t4O-64-iun"/>
                         <outlet property="details" destination="bmN-sM-c2o" id="j2q-fo-lWx"/>
-                        <outlet property="imageVIew" destination="2d0-lw-y0J" id="qmw-4n-aui"/>
+                        <outlet property="imageView" destination="2d0-lw-y0J" id="qmw-4n-aui"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h0C-wH-HBH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
