@@ -31,7 +31,7 @@ final class OrderViewController: UIViewController {
     }
     
     func donate(_ order: Order) {
-        let activity = NSUserActivity(activityType: "com.zachfrew.project5a.order")
+        let activity = NSUserActivity(activityType: "com.zachfrew.project5.order")
         
         let orderName = order.name
         if ["A", "E", "I", "O", "U"].contains(orderName.first) {

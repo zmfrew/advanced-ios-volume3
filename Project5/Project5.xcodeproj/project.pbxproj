@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		57186E93243779A000C82BCD /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57186E92243779A000C82BCD /* Order.swift */; };
+		578B06CA2438F96000FD1688 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 578B06C92438F96000FD1688 /* Intents.intentdefinition */; };
 		57FE8B722437732600BA2306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FE8B712437732600BA2306 /* AppDelegate.swift */; };
 		57FE8B762437732600BA2306 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FE8B752437732600BA2306 /* ViewController.swift */; };
 		57FE8B792437732600BA2306 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57FE8B772437732600BA2306 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		57186E92243779A000C82BCD /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		578B06C92438F96000FD1688 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		57FE8B6E2437732600BA2306 /* Project5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57FE8B712437732600BA2306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57FE8B752437732600BA2306 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		57FE8B702437732600BA2306 /* Project5 */ = {
 			isa = PBXGroup;
 			children = (
+				578B06C92438F96000FD1688 /* Intents.intentdefinition */,
 				57FE8B8D2437762100BA2306 /* Product.swift */,
 				57FE8B712437732600BA2306 /* AppDelegate.swift */,
 				57FE8B752437732600BA2306 /* ViewController.swift */,
@@ -155,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				578B06CA2438F96000FD1688 /* Intents.intentdefinition in Sources */,
 				57186E93243779A000C82BCD /* Order.swift in Sources */,
 				57FE8B762437732600BA2306 /* ViewController.swift in Sources */,
 				57FE8B8A2437739600BA2306 /* ToppingsViewController.swift in Sources */,

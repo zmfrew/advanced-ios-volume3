@@ -9,7 +9,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-        if userActivity.activityType == "com.zachfrew.project5a.order" {
+        if userActivity.activityType == "com.zachfrew.project5.order" {
             let navController = window?.rootViewController as! UINavigationController
             let orderVC = navController.storyboard!.instantiateViewController(identifier: "OrderViewController") as! OrderViewController
             
