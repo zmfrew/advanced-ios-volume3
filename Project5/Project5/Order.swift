@@ -17,3 +17,13 @@ struct Order: Codable, Hashable {
         toppings.reduce(cake.price) { $0 + $1.price }
     }
 }
+
+extension Order {
+    init?(from data: Data?) {
+        guard let data = data,
+            let savedOrder = try? JSONDecoder().decode(Order.self, from: data) else { return nil }
+        
+        cake = savedOrder.cake
+        toppings = savedOrder.toppings
+    }
+}
