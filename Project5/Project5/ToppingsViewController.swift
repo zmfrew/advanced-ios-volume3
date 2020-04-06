@@ -9,9 +9,7 @@ final class ToppingsViewController: UITableViewController {
         super.viewDidLoad()
         title = "Add Toppings"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Place Order", style: .plain, target: self, action: #selector(placeOrder))
-        let url = Bundle.main.url(forResource: "toppings", withExtension: "json")!
-        let data = try! Data(contentsOf: url)
-        toppings = try! JSONDecoder().decode([Product].self, from: data).sorted { $0.name < $1.name }
+        toppings = Menu.shared.toppings
     }
     
     @objc func placeOrder() {

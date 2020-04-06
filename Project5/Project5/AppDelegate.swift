@@ -13,12 +13,19 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
             let navController = window?.rootViewController as! UINavigationController
             let orderVC = navController.storyboard!.instantiateViewController(identifier: "OrderViewController") as! OrderViewController
             
-            if let order = Order(from: userActivity.userInfo?["order"] as? Data) {
-                orderVC.cake = order.cake
-                orderVC.toppings = order.toppings
-                
-                navController.pushViewController(orderVC, animated: true)
+            guard let intent = userActivity.interaction?.intent as? OrderIntent else {
+                print("Received unknown intent")
+                return true
             }
+
+            guard let order = Order(from: intent) else {
+                print("Received bad intent")
+                return true
+            }
+
+            orderVC.cake = order.cake
+            orderVC.toppings = order.toppings
+            navController.pushViewController(orderVC, animated: true)
         }
         
         return true

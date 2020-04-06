@@ -31,27 +31,13 @@ final class OrderViewController: UIViewController {
     }
     
     func donate(_ order: Order) {
-        let activity = NSUserActivity(activityType: "com.zachfrew.project5.order")
+        let interaction = INInteraction(intent: order.intent, response: nil)
         
-        let orderName = order.name
-        if ["A", "E", "I", "O", "U"].contains(orderName.first) {
-            activity.title = "Order an \(orderName)."
-        } else {
-            activity.title = "Order a \(orderName)."
+        interaction.donate { error in
+            if let error = error {
+                print(error)
+            }
         }
-        
-        activity.isEligibleForSearch = true
-        activity.isEligibleForPrediction = true
-        
-        if let orderData = try? JSONEncoder().encode(order) {
-            activity.userInfo = ["order": orderData]
-        }
-        
-        activity.persistentIdentifier = NSUserActivityPersistentIdentifier(order.name)
-        
-        activity.suggestedInvocationPhrase = "I need a cupcake!"
-        
-        userActivity = activity
     }
     
     func send(_ order: Order) {
